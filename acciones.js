@@ -14,11 +14,11 @@ const cambiarTituloBtn = document.getElementById('cambiar-titulo');
 const cambiarColorBtn = document.getElementById('cambiar-color');
 const cambiarImagenBtn = document.getElementById('cambiar-imagen');
 
-cambiarDisposicionBtn.addEventListener('click', function() {
+cambiarDisposicionBtn.addEventListener('click', function () {
     if (diseñoColumnas) {
         contenedorCiudades.style.flexDirection = 'column';
         contenedorCiudades.style.alignItems = 'center';
-        
+
 
         document.querySelectorAll('.ciudad').forEach(ciudad => {
             ciudad.style.width = '80%';
@@ -27,8 +27,8 @@ cambiarDisposicionBtn.addEventListener('click', function() {
     } else {
         contenedorCiudades.style.flexDirection = 'row';
         contenedorCiudades.style.alignItems = 'stretch';
-        
-        
+
+
         document.querySelectorAll('.ciudad').forEach(ciudad => {
             ciudad.style.width = '';
             ciudad.style.margin = '0 10px';
@@ -38,7 +38,7 @@ cambiarDisposicionBtn.addEventListener('click', function() {
 });
 
 
-cambiarTituloBtn.addEventListener('click', function() {
+cambiarTituloBtn.addEventListener('click', function () {
     if (tituloOriginal) {
         tituloPrincipal.textContent = 'HTML & CSS: Curso práctico avanzado';
     } else {
@@ -47,7 +47,7 @@ cambiarTituloBtn.addEventListener('click', function() {
     tituloOriginal = !tituloOriginal;
 });
 
-cambiarColorBtn.addEventListener('click', function() {
+cambiarColorBtn.addEventListener('click', function () {
     if (colorOriginal) {
         titulosCiudad.forEach(titulo => {
             titulo.style.color = 'red';
@@ -66,7 +66,7 @@ cambiarColorBtn.addEventListener('click', function() {
     colorOriginal = !colorOriginal;
 });
 
-cambiarImagenBtn.addEventListener('click', function() {
+cambiarImagenBtn.addEventListener('click', function () {
     if (imagenVisible) {
         imagenFooter.style.display = 'none';
         cambiarImagenBtn.textContent = 'Mostrar imagen en footer';
@@ -75,4 +75,6 @@ cambiarImagenBtn.addEventListener('click', function() {
         cambiarImagenBtn.textContent = 'Ocultar imagen en footer';
     }
     imagenVisible = !imagenVisible;
+
+
 });
